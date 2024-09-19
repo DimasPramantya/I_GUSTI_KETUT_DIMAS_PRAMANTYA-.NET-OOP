@@ -2,34 +2,6 @@
 
 namespace Tugas
 {
-    public class User
-    {
-        public string Name { get; set; }
-        public double Saldo { get; set; }
-    }
-
-    public class Admin : User
-    {
-        public void UbahSaldo(Customer customer, double saldo)
-        {
-            customer.Saldo += saldo;
-        }
-
-        public Admin(string nama)
-        {
-            this.Name = nama;
-        }
-    }
-
-    public class Customer : User
-    {
-        public Customer(string nama, double saldo)
-        {
-            this.Saldo = saldo;
-            this.Name = nama;
-        }
-
-    }
     internal class Program
     {
         static void Main(string[] args)
@@ -47,7 +19,7 @@ namespace Tugas
                 System.Console.WriteLine("Program EMONEY");
                 System.Console.WriteLine();
                 System.Console.WriteLine("1. ADMIN");
-                System.Console.WriteLine("2. User");
+                System.Console.WriteLine("2. CUSTOMER");
                 System.Console.Write("Menu = ");
                 menu = Convert.ToInt32(Console.ReadLine());
                 if (menu == 1)
